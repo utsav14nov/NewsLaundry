@@ -1,0 +1,20 @@
+{
+  "name": "newslaundry-assignment",
+  "version": "1.0.0",
+  "description": "Assignment for news laundry",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI"
+  ],
+  "author": "Utsav Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "async-each": "^1.0.1",
+    "express": "^4.16.3",
+    "get-csv": "^3.0.3"
+  }
+}
