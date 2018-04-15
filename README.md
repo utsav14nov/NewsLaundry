@@ -25,8 +25,8 @@ For two problem statement two routes have been defined in app.routes.js
 
 Note: month paramater should be full name of the month.
 
-Middleware is defined in server.js file which fetches the Csv from the Url.If successfullt fetched proceed further
-else returns
+Middleware is defined in server.js file which fetches the Csv from the Url.If successfully fetched proceed further
+else returns.
 
 In Problem statement 1 ,to find number of gainers and losers for the given month,
 I calculated the count of start date and end date for the particular month from Csv file.
