@@ -25,10 +25,10 @@ function checkValidMonth(month){
 /*function for problem 1*/
 exports.subscribers = (req, res) => {
 	if(!req.params.month){
-		res.status(400).send({message:'Month cannot be empty'});
+		return res.status(400).send({message:'Month cannot be empty'});
 	}
 	if(!checkValidMonth(req.params.month)){
-		res.status(400).send({message:'Invalid month'});
+		return res.status(400).send({message:'Invalid month'});
 	}
 	let data = req.subscriptionData;
 	let month = req.params.month;
@@ -49,7 +49,7 @@ exports.subscribers = (req, res) => {
 		next();
 	},function(error){
 		if(error){
-			res.status(500).send({message:'Something went wrong'});	
+			return res.status(500).send({message:'Something went wrong'});	
 		}else{
 			res.status(200).send({gained:startCount,lost:endCount});
 		}
@@ -60,10 +60,10 @@ exports.subscribers = (req, res) => {
 /*function for problem 2*/
 exports.levels = (req, res) => {
 	if(!req.params.month){
-		res.status(400).send({message:'Month cannot be empty'});
+		return res.status(400).send({message:'Month cannot be empty'});
 	}
 	if(!checkValidMonth(req.params.month)){
-		res.status(400).send({message:'Invalid month'});
+		return res.status(400).send({message:'Invalid month'});
 	}
 	let data = req.subscriptionData;
 	let month = req.params.month;
@@ -103,7 +103,7 @@ exports.levels = (req, res) => {
 		next();
 	},function(error){
 		if(error){
-			res.status(500).send({message:'Something went wrong'});	
+			return res.status(500).send({message:'Something went wrong'});	
 		}else{
 			res.status(200).send(typeMap);
 		}
